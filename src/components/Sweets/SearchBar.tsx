@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Search, Filter } from 'lucide-react';
+import { useState } from "react";
+import { Search, Filter } from "lucide-react";
 
 interface SearchBarProps {
   onSearch: (params: {
@@ -11,10 +11,10 @@ interface SearchBarProps {
 }
 
 export function SearchBar({ onSearch }: SearchBarProps) {
-  const [name, setName] = useState('');
-  const [category, setCategory] = useState('');
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
   const [showFilters, setShowFilters] = useState(false);
 
   const handleSearch = () => {
@@ -27,10 +27,10 @@ export function SearchBar({ onSearch }: SearchBarProps) {
   };
 
   const handleClear = () => {
-    setName('');
-    setCategory('');
-    setMinPrice('');
-    setMaxPrice('');
+    setName("");
+    setCategory("");
+    setMinPrice("");
+    setMaxPrice("");
     onSearch({});
   };
 
@@ -44,7 +44,7 @@ export function SearchBar({ onSearch }: SearchBarProps) {
             placeholder="Search sweets by name..."
             value={name}
             onChange={(e) => setName(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+            onKeyPress={(e) => e.key === "Enter" && handleSearch()}
             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
@@ -52,8 +52,8 @@ export function SearchBar({ onSearch }: SearchBarProps) {
           onClick={() => setShowFilters(!showFilters)}
           className={`px-6 py-3 rounded-lg font-medium transition flex items-center gap-2 ${
             showFilters
-              ? 'bg-amber-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              ? "bg-amber-600 text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           <Filter className="w-5 h-5" />
@@ -73,11 +73,14 @@ export function SearchBar({ onSearch }: SearchBarProps) {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             >
               <option value="">All Categories</option>
-              <option value="chocolate">Chocolate</option>
-              <option value="candy">Candy</option>
-              <option value="gummy">Gummy</option>
-              <option value="lollipop">Lollipop</option>
-              <option value="taffy">Taffy</option>
+              <option value="Indian Sweet">Indian Sweet</option>
+              <option value="Bengali Sweet">Bengali Sweet</option>
+              <option value="Cakes">Cakes</option>
+              <option value="Pastries">Pastries</option>
+              <option value="Cookies">Cookies</option>
+              <option value="International Sweet">International Sweet</option>
+              <option value="Sugar-free">Sugar-free</option>
+              <option value="Vegan">Vegan</option>
             </select>
           </div>
 

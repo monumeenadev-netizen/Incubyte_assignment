@@ -10,7 +10,7 @@ interface SweetFormModalProps {
 
 export function SweetFormModal({ sweet, onClose, onSubmit }: SweetFormModalProps) {
   const [name, setName] = useState('');
-  const [category, setCategory] = useState('chocolate');
+  const [category, setCategory] = useState('Indian Sweet');
   const [price, setPrice] = useState('');
   const [quantity, setQuantity] = useState('');
   const [description, setDescription] = useState('');
@@ -86,11 +86,14 @@ export function SweetFormModal({ sweet, onClose, onSubmit }: SweetFormModalProps
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               required
             >
-              <option value="chocolate">Chocolate</option>
-              <option value="candy">Candy</option>
-              <option value="gummy">Gummy</option>
-              <option value="lollipop">Lollipop</option>
-              <option value="taffy">Taffy</option>
+              <option value="Indian Sweet">Indian Sweet</option>
+              <option value="Bengali Sweet">Bengali Sweet</option>
+              <option value="Cakes">Cakes</option>
+              <option value="Pastries">Pastries</option>
+              <option value="Cookies">Cookies</option>
+              <option value="International Sweet">International Sweet</option>
+              <option value="Sugar-free">Sugar-free</option>
+              <option value="Vegan">Vegan</option>
             </select>
           </div>
 
